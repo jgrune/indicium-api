@@ -21,10 +21,7 @@ var SearchSchema = new Schema({
   body: String
 })
 
-var TweetModel = mongoose.model("Tweet", TweetSchema);
-var SearchModel = mongoose.model("Search", SearchSchema)
+mongoose.model("Tweet", TweetSchema);
+mongoose.model("Search", SearchSchema)
 
-module.exports = {
-  TweetModel,
-  SearchModel
-};
+module.exports = mongoose;
