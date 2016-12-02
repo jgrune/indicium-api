@@ -3,7 +3,11 @@ var mongoose = require("./db/schema");
 var express = require("express");
 var parser = require("body-parser")
 var MonkeyLearn = require('monkeylearn');
+var cors = require('cors')
 var app = express();
+
+//enable cors
+app.use(cors());
 
 //linking both mongoose models
 var Tweet = mongoose.model("Tweet")
