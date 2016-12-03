@@ -31,11 +31,16 @@ function callMonkeyLearn(searchText){
   var module_id = 'cl_mcHq5Mxu';
   var text_list = searchText;
 
-  var p = ml.classifiers.classify(module_id, text_list, true);
 
-  p.then(function (res) {
-    console.log(res.result);
-  });
+// ==============
+// ACTUAL API CALL
+// ==============
+
+  // var p = ml.classifiers.classify(module_id, text_list, true);
+  //
+  // p.then(function (res) {
+  //   console.log(res.result);
+  // });
 }
 
 module.exports = tweetController;
