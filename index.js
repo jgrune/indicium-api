@@ -49,6 +49,12 @@ app.get("/api/tweets/:search", (req,res) => {
   })
 })
 
+app.post("/api/searches", function(req, res){
+  Search.create(req.body).then(function(search){
+    res.json(search)
+  })
+});
+
 function callMonkeyLearn(searchText){
   var MonkeyLearn = require('monkeylearn');
   var ml = new MonkeyLearn('e5058891ff5968487d756aa9a229e9993325b011');
