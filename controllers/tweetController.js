@@ -11,9 +11,10 @@ var tweetController = {
   show: (req,res) => {
     var searchText = []
     var text = ""
+    var regex = new RegExp(` ${req.params.search} `, "i")
 
     Tweet.find({
-      body: new RegExp(`${req.params.search}`, "i")
+      body: regex
     }).then((tweets) => {
       tweets.forEach((tweet, i) => {
         text += tweet.body + " "
