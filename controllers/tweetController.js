@@ -13,7 +13,7 @@ var tweetController = {
     var text = ""
 
     Tweet.find({
-      body: new RegExp(req.params.search, "i")
+      body: new RegExp(`${req.params.search}`, "i")
     }).then((tweets) => {
       tweets.forEach((tweet, i) => {
         text += tweet.body + " "
@@ -22,10 +22,8 @@ var tweetController = {
       callSentimentAnalysis(searchText).then((data) => {
         console.log("this is the promise returned form callSentimentAnalysis")
         console.log(data)
+        res.json({tweets: tweets, sentiment: data})
       })
-      console.log(category)
-      console.log(result)
-      res.json({tweets: tweets, sentiment: result})
 
       // callEntityPull(searchText)
     })

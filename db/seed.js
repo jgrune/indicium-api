@@ -1,6 +1,6 @@
 var mongoose = require("./schema.js");
 
-var tweetData = require("./seed_data/tweet_seeds.js");
+var tweetData = require("./seed_data/tweets.json");
 var searchData = require("./seed_data/search_seeds.json");
 
 var Tweet = mongoose.model("Tweet")
