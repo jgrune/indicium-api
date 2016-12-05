@@ -46,7 +46,7 @@ function callSentimentAnalysis(searchText){
     var p = ml.classifiers.classify(module_id, text_list, true);
 
     let def = p.then(function (res) {
-      return "pizza"
+      return res.result[0][0]
     });
 
     return def
