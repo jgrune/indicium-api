@@ -19,9 +19,15 @@ var tweetController = {
         text += tweet.body + " "
       })
       searchText.push(text)
-      res.json(tweets)
-      callSentimentAnalysis(searchText)
-      callEntityPull(searchText)
+      callSentimentAnalysis(searchText).then((data) => {
+        console.log("this is the promise returned form callSentimentAnalysis")
+        console.log(data)
+      })
+      console.log(category)
+      console.log(result)
+      res.json({tweets: tweets, sentiment: result})
+
+      // callEntityPull(searchText)
     })
   }
 }
@@ -39,9 +45,11 @@ function callSentimentAnalysis(searchText){
 //
     var p = ml.classifiers.classify(module_id, text_list, true);
 
-    p.then(function (res) {
-      console.log(res.result);
+    let def = p.then(function (res) {
+      return "pizza"
     });
+
+    return def
 //
 // ==== end of call ======
 }
@@ -52,10 +60,11 @@ function callEntityPull(searchText){
   var ml = new MonkeyLearn('dd6214d9b29784d3acc6bdc1b3f014731223623e');
   var module_id = 'ex_isnnZRbS';
   var text_list = searchText;
-  var p = ml.extractors.extract(module_id, text_list);
-  p.then(function (res) {
-      console.log(res.result);
-  });
+
+  // var p = ml.extractors.extract(module_id, text_list);
+  // p.then(function (res) {
+  //     console.log(res.result);
+  // });
 
 }
 
