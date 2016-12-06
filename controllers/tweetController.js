@@ -24,8 +24,6 @@ var tweetController = {
         text += tweet.body + ". "
       })
         searchText.push(text)
-        console.log(searchText);
-          res.json(tweets)
 
         var parameters = {
           extract: 'entities, concepts, doc-sentiment, doc-emotion',
@@ -37,12 +35,9 @@ var tweetController = {
             console.log('error:', err);
           else
             console.log(JSON.stringify(response, null, 2));
+            res.json(response);
         });
-
-
       })
-
-
   }
 }
 
