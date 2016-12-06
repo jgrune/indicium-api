@@ -1,8 +1,9 @@
 var mongoose = require('../db/schema.js')
 var Tweet = mongoose.model("Tweet")
+var keys = require("../keys.js")
 var watson = require('watson-developer-cloud');
 var alchemy_language = watson.alchemy_language({
-  api_key: '90cdce4101b60788c761f5610151f6d7837c443b'
+  api_key: keys.watson
 });
 
 var tweetController = {
