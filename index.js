@@ -5,6 +5,9 @@ var express = require("express");
 var parser = require("body-parser")
 var cors = require('cors')
 var app = express();
+var AlchemyAPI = require('./alchemyapi');
+var alchemyapi = new AlchemyAPI();
+
 
 //enable cors
 app.use(cors());
@@ -19,7 +22,6 @@ app.listen(4000), () => {
 }
 
 //routes for express
-
 app.get("/api/tweets", tweetController.index)
 app.get("/api/tweets/:search", tweetController.show)
 app.post("/api/searches", searchController.new);
