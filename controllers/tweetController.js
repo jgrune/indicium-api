@@ -21,14 +21,23 @@ var T = new Twit({
 })
 
 function getTweets(search) {
-  return T.get('search/tweets', { q: `${search} since:2011-07-11`, count: 1 }, function(err, data, response) {
+  let cleanData = T.get('search/tweets', { q: `${search} since:2011-07-11`, count: 1 }, function(err, data, response) {
     if(err){
       console.log(`error: ${err}`);
     }
+  }).then((rawData) => {
+    let data = {}
+    data.text = rawData.data.statuses[0].text
+    data.created_at = rawData.data.statuses[0].created_at
+    data.userName = rawData.data.statuses[0].user.screen_name
+    data.retweets = rawData.data.statuses[0].retweet_count
+    data.favorites = rawData.data.statuses[0].favorite_count
+    return data
   })
 
+  return cleanData
+
 // manipulate rawdata into clean data
-  // 
   // cleanData = rawData.data.statuses[0].text
   // console.log("this is our clean data:")
   // console.log(cleanData);
@@ -48,6 +57,11 @@ var tweetController = {
     getTweets(req.params.search).then((response) => {
       res.json(response)
     })
+
+
+    // .then((response) => {
+    //   res.json(response)
+    // })
 
     //
     // var searchText = [];

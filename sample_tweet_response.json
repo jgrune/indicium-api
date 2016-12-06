@@ -1,0 +1,466 @@
+{
+  "data": {
+    "statuses": [
+      {
+        "created_at": "Tue Dec 06 16:50:13 +0000 2016",
+        "id": 806178946094104600,
+        "id_str": "806178946094104577",
+        "text": "RT @FoxNews: .@RealDeanCain says celebrities need to stop telling people how to vote. https://t.co/lLS83FadJ5 https://t.co/mx8wrPH5YY",
+        "truncated": false,
+        "entities": {
+          "hashtags": [],
+          "symbols": [],
+          "user_mentions": [
+            {
+              "screen_name": "FoxNews",
+              "name": "Fox News",
+              "id": 1367531,
+              "id_str": "1367531",
+              "indices": [
+                3,
+                11
+              ]
+            },
+            {
+              "screen_name": "RealDeanCain",
+              "name": "Dean Cain",
+              "id": 581999965,
+              "id_str": "581999965",
+              "indices": [
+                14,
+                27
+              ]
+            }
+          ],
+          "urls": [
+            {
+              "url": "https://t.co/lLS83FadJ5",
+              "expanded_url": "http://bit.ly/2hbWfV4",
+              "display_url": "bit.ly/2hbWfV4",
+              "indices": [
+                86,
+                109
+              ]
+            }
+          ],
+          "media": [
+            {
+              "id": 806164723095830500,
+              "id_str": "806164723095830528",
+              "indices": [
+                110,
+                133
+              ],
+              "media_url": "http://pbs.twimg.com/media/CzASi16UAAAjH5q.jpg",
+              "media_url_https": "https://pbs.twimg.com/media/CzASi16UAAAjH5q.jpg",
+              "url": "https://t.co/mx8wrPH5YY",
+              "display_url": "pic.twitter.com/mx8wrPH5YY",
+              "expanded_url": "https://twitter.com/FoxNews/status/806164932148469760/photo/1",
+              "type": "photo",
+              "sizes": {
+                "thumb": {
+                  "w": 150,
+                  "h": 150,
+                  "resize": "crop"
+                },
+                "small": {
+                  "w": 574,
+                  "h": 574,
+                  "resize": "fit"
+                },
+                "medium": {
+                  "w": 574,
+                  "h": 574,
+                  "resize": "fit"
+                },
+                "large": {
+                  "w": 574,
+                  "h": 574,
+                  "resize": "fit"
+                }
+              },
+              "source_status_id": 806164932148469800,
+              "source_status_id_str": "806164932148469760",
+              "source_user_id": 1367531,
+              "source_user_id_str": "1367531"
+            }
+          ]
+        },
+        "extended_entities": {
+          "media": [
+            {
+              "id": 806164723095830500,
+              "id_str": "806164723095830528",
+              "indices": [
+                110,
+                133
+              ],
+              "media_url": "http://pbs.twimg.com/media/CzASi16UAAAjH5q.jpg",
+              "media_url_https": "https://pbs.twimg.com/media/CzASi16UAAAjH5q.jpg",
+              "url": "https://t.co/mx8wrPH5YY",
+              "display_url": "pic.twitter.com/mx8wrPH5YY",
+              "expanded_url": "https://twitter.com/FoxNews/status/806164932148469760/photo/1",
+              "type": "photo",
+              "sizes": {
+                "thumb": {
+                  "w": 150,
+                  "h": 150,
+                  "resize": "crop"
+                },
+                "small": {
+                  "w": 574,
+                  "h": 574,
+                  "resize": "fit"
+                },
+                "medium": {
+                  "w": 574,
+                  "h": 574,
+                  "resize": "fit"
+                },
+                "large": {
+                  "w": 574,
+                  "h": 574,
+                  "resize": "fit"
+                }
+              },
+              "source_status_id": 806164932148469800,
+              "source_status_id_str": "806164932148469760",
+              "source_user_id": 1367531,
+              "source_user_id_str": "1367531"
+            }
+          ]
+        },
+        "metadata": {
+          "iso_language_code": "en",
+          "result_type": "recent"
+        },
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+          "id": 36094320,
+          "id_str": "36094320",
+          "name": "Tonya Davis",
+          "screen_name": "ibtonyad",
+          "location": "",
+          "description": "Mother, wife & child of God",
+          "url": null,
+          "entities": {
+            "description": {
+              "urls": []
+            }
+          },
+          "protected": false,
+          "followers_count": 25,
+          "friends_count": 24,
+          "listed_count": 0,
+          "created_at": "Tue Apr 28 15:31:55 +0000 2009",
+          "favourites_count": 3989,
+          "utc_offset": null,
+          "time_zone": null,
+          "geo_enabled": false,
+          "verified": false,
+          "statuses_count": 66,
+          "lang": "en",
+          "contributors_enabled": false,
+          "is_translator": false,
+          "is_translation_enabled": false,
+          "profile_background_color": "C0DEED",
+          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_tile": false,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/796057538814951425/-mwWMzSi_normal.jpg",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/796057538814951425/-mwWMzSi_normal.jpg",
+          "profile_link_color": "1DA1F2",
+          "profile_sidebar_border_color": "C0DEED",
+          "profile_sidebar_fill_color": "DDEEF6",
+          "profile_text_color": "333333",
+          "profile_use_background_image": true,
+          "has_extended_profile": false,
+          "default_profile": true,
+          "default_profile_image": false,
+          "following": false,
+          "follow_request_sent": false,
+          "notifications": false,
+          "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweeted_status": {
+          "created_at": "Tue Dec 06 15:54:32 +0000 2016",
+          "id": 806164932148469800,
+          "id_str": "806164932148469760",
+          "text": ".@RealDeanCain says celebrities need to stop telling people how to vote. https://t.co/lLS83FadJ5 https://t.co/mx8wrPH5YY",
+          "truncated": false,
+          "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+              {
+                "screen_name": "RealDeanCain",
+                "name": "Dean Cain",
+                "id": 581999965,
+                "id_str": "581999965",
+                "indices": [
+                  1,
+                  14
+                ]
+              }
+            ],
+            "urls": [
+              {
+                "url": "https://t.co/lLS83FadJ5",
+                "expanded_url": "http://bit.ly/2hbWfV4",
+                "display_url": "bit.ly/2hbWfV4",
+                "indices": [
+                  73,
+                  96
+                ]
+              }
+            ],
+            "media": [
+              {
+                "id": 806164723095830500,
+                "id_str": "806164723095830528",
+                "indices": [
+                  97,
+                  120
+                ],
+                "media_url": "http://pbs.twimg.com/media/CzASi16UAAAjH5q.jpg",
+                "media_url_https": "https://pbs.twimg.com/media/CzASi16UAAAjH5q.jpg",
+                "url": "https://t.co/mx8wrPH5YY",
+                "display_url": "pic.twitter.com/mx8wrPH5YY",
+                "expanded_url": "https://twitter.com/FoxNews/status/806164932148469760/photo/1",
+                "type": "photo",
+                "sizes": {
+                  "thumb": {
+                    "w": 150,
+                    "h": 150,
+                    "resize": "crop"
+                  },
+                  "small": {
+                    "w": 574,
+                    "h": 574,
+                    "resize": "fit"
+                  },
+                  "medium": {
+                    "w": 574,
+                    "h": 574,
+                    "resize": "fit"
+                  },
+                  "large": {
+                    "w": 574,
+                    "h": 574,
+                    "resize": "fit"
+                  }
+                }
+              }
+            ]
+          },
+          "extended_entities": {
+            "media": [
+              {
+                "id": 806164723095830500,
+                "id_str": "806164723095830528",
+                "indices": [
+                  97,
+                  120
+                ],
+                "media_url": "http://pbs.twimg.com/media/CzASi16UAAAjH5q.jpg",
+                "media_url_https": "https://pbs.twimg.com/media/CzASi16UAAAjH5q.jpg",
+                "url": "https://t.co/mx8wrPH5YY",
+                "display_url": "pic.twitter.com/mx8wrPH5YY",
+                "expanded_url": "https://twitter.com/FoxNews/status/806164932148469760/photo/1",
+                "type": "photo",
+                "sizes": {
+                  "thumb": {
+                    "w": 150,
+                    "h": 150,
+                    "resize": "crop"
+                  },
+                  "small": {
+                    "w": 574,
+                    "h": 574,
+                    "resize": "fit"
+                  },
+                  "medium": {
+                    "w": 574,
+                    "h": 574,
+                    "resize": "fit"
+                  },
+                  "large": {
+                    "w": 574,
+                    "h": 574,
+                    "resize": "fit"
+                  }
+                }
+              }
+            ]
+          },
+          "metadata": {
+            "iso_language_code": "en",
+            "result_type": "recent"
+          },
+          "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+          "in_reply_to_status_id": null,
+          "in_reply_to_status_id_str": null,
+          "in_reply_to_user_id": null,
+          "in_reply_to_user_id_str": null,
+          "in_reply_to_screen_name": null,
+          "user": {
+            "id": 1367531,
+            "id_str": "1367531",
+            "name": "Fox News",
+            "screen_name": "FoxNews",
+            "location": "U.S.A.",
+            "description": "America’s Strongest Primetime Lineup Anywhere! Follow America's #1 cable news network, delivering you breaking news, insightful analysis, and must-see videos.",
+            "url": "http://t.co/ZYG58XZtAC",
+            "entities": {
+              "url": {
+                "urls": [
+                  {
+                    "url": "http://t.co/ZYG58XZtAC",
+                    "expanded_url": "http://www.foxnews.com",
+                    "display_url": "foxnews.com",
+                    "indices": [
+                      0,
+                      22
+                    ]
+                  }
+                ]
+              },
+              "description": {
+                "urls": []
+              }
+            },
+            "protected": false,
+            "followers_count": 12051302,
+            "friends_count": 430,
+            "listed_count": 55124,
+            "created_at": "Sat Mar 17 19:01:26 +0000 2007",
+            "favourites_count": 0,
+            "utc_offset": -18000,
+            "time_zone": "Eastern Time (US & Canada)",
+            "geo_enabled": false,
+            "verified": true,
+            "statuses_count": 282476,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": true,
+            "profile_background_color": "0E2331",
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/414488415/xyz123abc.jpg",
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/414488415/xyz123abc.jpg",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/794654746342662144/hHnFe4Sx_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/794654746342662144/hHnFe4Sx_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/1367531/1478723679",
+            "profile_link_color": "183A52",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "F4F4F4",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "regular"
+          },
+          "geo": null,
+          "coordinates": null,
+          "place": null,
+          "contributors": null,
+          "is_quote_status": false,
+          "retweet_count": 292,
+          "favorite_count": 1124,
+          "favorited": false,
+          "retweeted": false,
+          "possibly_sensitive": false,
+          "lang": "en"
+        },
+        "is_quote_status": false,
+        "retweet_count": 292,
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+      }
+    ],
+    "search_metadata": {
+      "completed_in": 0.05,
+      "max_id": 806178946094104600,
+      "max_id_str": "806178946094104577",
+      "next_results": "?max_id=806178946094104576&q=trump%20since%3A2011-07-11&count=1&include_entities=1",
+      "query": "trump+since%3A2011-07-11",
+      "refresh_url": "?since_id=806178946094104577&q=trump%20since%3A2011-07-11&include_entities=1",
+      "count": 1,
+      "since_id": 0,
+      "since_id_str": "0"
+    }
+  },
+  "resp": {
+    "statusCode": 200,
+    "headers": {
+      "cache-control": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0",
+      "connection": "close",
+      "content-disposition": "attachment; filename=json.json",
+      "content-encoding": "gzip",
+      "content-length": "1960",
+      "content-type": "application/json;charset=utf-8",
+      "date": "Tue, 06 Dec 2016 16:50:33 GMT",
+      "expires": "Tue, 31 Mar 1981 05:00:00 GMT",
+      "last-modified": "Tue, 06 Dec 2016 16:50:33 GMT",
+      "pragma": "no-cache",
+      "server": "tsa_b",
+      "set-cookie": [
+        "lang=en; Path=/",
+        "guest_id=v1%3A148104303387043782; Domain=.twitter.com; Path=/; Expires=Thu, 06-Dec-2018 16:50:33 UTC"
+      ],
+      "status": "200 OK",
+      "strict-transport-security": "max-age=631138519",
+      "x-access-level": "read-write",
+      "x-connection-hash": "bc3d5e0c87a5af020fe11068f817de96",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-rate-limit-limit": "180",
+      "x-rate-limit-remaining": "160",
+      "x-rate-limit-reset": "1481043156",
+      "x-response-time": "84",
+      "x-transaction": "0041406a0018a210",
+      "x-twitter-response-tags": "BouncerCompliant",
+      "x-xss-protection": "1; mode=block"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "api.twitter.com",
+        "port": 443,
+        "hostname": "api.twitter.com",
+        "hash": null,
+        "search": "?q=trump%20since%3A2011-07-11&count=1",
+        "query": "q=trump%20since%3A2011-07-11&count=1",
+        "pathname": "/1.1/search/tweets.json",
+        "path": "/1.1/search/tweets.json?q=trump%20since%3A2011-07-11&count=1",
+        "href": "https://api.twitter.com/1.1/search/tweets.json?q=trump%20since%3A2011-07-11&count=1"
+      },
+      "method": "GET",
+      "headers": {
+        "Accept": "*/*",
+        "User-Agent": "twit-client",
+        "Content-type": "application/json",
+        "accept-encoding": "gzip, deflate",
+        "Authorization": "OAuth oauth_consumer_key=\"YdqghNobO9R8xcx6V7XmCOetX\",oauth_nonce=\"86dd3c0a3196423caaf7c3f876561a3c\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1481043033\",oauth_token=\"704384048160870400-6syiHh5XNyoRhu47DQciB9sw5URA4zh\",oauth_version=\"1.0\",oauth_signature=\"FusdVEW3SdFF6rG%2Bj3dxYfMcJT8%3D\""
+      }
+    }
+  }
+}
