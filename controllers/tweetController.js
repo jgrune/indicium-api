@@ -39,4 +39,8 @@ var tweetController = {
   }
 }
 
+function watsonCall(searchText){
+
+}
+
 module.exports = tweetController;
