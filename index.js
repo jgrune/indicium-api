@@ -5,8 +5,10 @@ var express = require("express");
 var parser = require("body-parser")
 var cors = require('cors')
 var app = express();
-var AlchemyAPI = require('./alchemyapi');
-var alchemyapi = new AlchemyAPI();
+var watson = require('watson-developer-cloud');
+var alchemy_language = watson.alchemy_language({
+  api_key: '90cdce4101b60788c761f5610151f6d7837c443b'
+});
 
 
 //enable cors
