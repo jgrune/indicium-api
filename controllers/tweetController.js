@@ -11,6 +11,9 @@ var alchemy_language = watson.alchemy_language({
 // ===== TWITTER API =======
 var Twit = require('twit')
 
+//select number of tweets you want returned
+var numTweets = 5;
+
 //twitter API keys
 var T = new Twit({
   consumer_key:         keys.twitter.consumer_key,
@@ -21,18 +24,23 @@ var T = new Twit({
 })
 
 function getTweets(search) {
-  let cleanData = T.get('search/tweets', { q: `${search} since:2011-07-11`, count: 1 }, function(err, data, response) {
+  let cleanData = T.get('search/tweets', { q: `${search} since:2011-07-11`, count: numTweets }, function(err, data, response) {
     if(err){
       console.log(`error: ${err}`);
     }
   }).then((rawData) => {
-    let data = {}
-    data.text = rawData.data.statuses[0].text
-    data.created_at = rawData.data.statuses[0].created_at
-    data.userName = rawData.data.statuses[0].user.screen_name
-    data.retweets = rawData.data.statuses[0].retweet_count
-    data.favorites = rawData.data.statuses[0].favorite_count
-    return data
+    let dataArray = []
+    for (i in rawData.data.statuses){
+      data = {}
+      data.text = rawData.data.statuses[i].text
+      data.created_at = rawData.data.statuses[i].created_at
+      data.userName = rawData.data.statuses[i].user.screen_name
+      data.retweets = rawData.data.statuses[i].retweet_count
+      data.favorites = rawData.data.statuses[i].favorite_count
+
+      dataArray.push(data)
+    }
+    return dataArray
   })
 
   return cleanData
