@@ -1,12 +1,10 @@
 var mongoose = require('../db/schema.js')
-var Tweet = mongoose.model("Tweet")
 var keys = require("../keys.js")
 var watson = require('watson-developer-cloud');
 var alchemy_language = watson.alchemy_language({
   api_key: keys.watson
 });
-
-
+var TweetModel = require('../models/tweet')
 
 // ===== TWITTER API =======
 var Twit = require('twit')
@@ -29,28 +27,20 @@ function getTweets(search) {
       console.log(`error: ${err}`);
     }
   }).then((rawData) => {
-    let dataArray = []
-    for (i in rawData.data.statuses){
-      data = {}
-      data.text = rawData.data.statuses[i].text
-      data.created_at = rawData.data.statuses[i].created_at
-      data.userName = rawData.data.statuses[i].user.screen_name
-      data.retweets = rawData.data.statuses[i].retweet_count
-      data.favorites = rawData.data.statuses[i].favorite_count
-
-      dataArray.push(data)
+    let responseObject = {
+      tweets: [],
+      watsonResponse: {}
     }
-    return dataArray
+    let tweets = rawData.data.statuses.map((tweetData) => {
+      return (
+        new TweetModel(tweetData.text, tweetData.created_at, tweetData.user.screen_name, tweetData.retweet_count, tweetData.favorite_count)
+      )
+    })
+
+    responseObject.tweets = tweets
+    return responseObject
   })
-
   return cleanData
-
-// manipulate rawdata into clean data
-  // cleanData = rawData.data.statuses[0].text
-  // console.log("this is our clean data:")
-  // console.log(cleanData);
-  //
-  // return cleanData
 }
 
 // ======= TWEET CONTROLLER ============
@@ -62,45 +52,36 @@ var tweetController = {
     })
   },
   show: (req,res) => {
-    getTweets(req.params.search).then((response) => {
-      res.json(response)
-    })
 
+    var searchText = [];
+    var text = "";
 
-    // .then((response) => {
-    //   res.json(response)
-    // })
+    getTweets(req.params.search).then((responseObject) => {
+      responseObject.tweets.forEach((tweet, i) => {
+        text += tweet.text + ". "
+      })
 
-    //
-    // var searchText = [];
-    // var text = "";
-    // var regex = new RegExp(` ${req.params.search} `, "i");
-    //
-    // Tweet.find({
-    //   body: regex
-    // }).then((tweets) => {
-    //   tweets.forEach((tweet, i) => {
-    //     text += tweet.body + ". "
-    //   })
-    //     searchText.push(text)
-    //
+    // create single concatenated string of tweets to be consumed by watson API
+      searchText.push(text)
 
+// ==============
+//   WATSON API
+// ==============
+    var parameters = {
+      extract: 'entities, concepts, doc-sentiment, doc-emotion, keywords',
+      text: searchText
+    };
 
-
-// ========== WATSON API  ===========
-        // var parameters = {
-        //   extract: 'entities, concepts, doc-sentiment, doc-emotion, keywords',
-        //   text: searchText
-        // };
-        // alchemy_language.combined(parameters, function (err, response) {
-        //   if (err)
-        //     console.log('error:', err);
-        //   else
-        //     console.log(JSON.stringify(response, null, 2));
-        //     res.json(response);
-        // });
-      // })
+    let stuff = alchemy_language.combined(parameters, function (err, watsonResults) {
+      if (err)
+        return {'error': err}
+      else
+        // console.log(JSON.stringify(watsonResults, null, 2))
+        responseObject.watsonResponse = watsonResults
+        res.json(responseObject);
+        });
+      })
+    }
   }
-}
 
 module.exports = tweetController;
