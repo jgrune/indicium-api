@@ -23,10 +23,22 @@ var tweetController = {
         text += tweet.body + " "
       })
       searchText.push(text);
+
       alchemyapi.sentiment("text", searchText, {}, function(response) {
-        console.log("Sentiment: " + response['docSentiment']['type']);
+        console.log(response['docSentiment']['type']);
+        return response['docSentiment']['type'];
       });
-      res.json(tweets)
+
+      alchemyapi.entities("text", searchText, {}, function(response){
+        console.log("Entities: " + response)
+      });
+
+      alchemyapi.concepts("text", searchText, {}, function(response){
+        console.log("Concepts: " + response)
+      });
+
+      res.json(tweets);
+
     })
 
   }
