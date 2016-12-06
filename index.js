@@ -10,16 +10,6 @@ var watson = require('watson-developer-cloud');
 var alchemy_language = watson.alchemy_language({
   api_key: keys.watson
 });
-var Twit = require('twit')
-
-//twitter API keys
-var T = new Twit({
-  consumer_key:         keys.twitter.consumer_key,
-  consumer_secret:      keys.twitter.consumer_secret,
-  access_token:         keys.twitter.access_token,
-  access_token_secret:  keys.twitter.access_token_secret,
-  timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
-})
 
 //enable cors
 app.use(cors());
@@ -35,5 +25,7 @@ app.listen(4000), () => {
 
 //routes for express
 app.get("/api/tweets", tweetController.index)
+
 app.get("/api/tweets/:search", tweetController.show)
+
 app.post("/api/searches", searchController.new);
