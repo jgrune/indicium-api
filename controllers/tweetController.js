@@ -10,35 +10,26 @@ var tweetController = {
       res.json(tweets)
     })
   },
-  show: (req,res) => {
-
+  show: function example(req,res) {
     var output = {};
     var searchText = [];
     var text = "";
     var regex = new RegExp(` ${req.params.search} `, "i");
 
-    Tweet.find({ body: regex }).then((tweets) => {
-      console.log("These are the tweets")
-      console.log(tweets);
+    Tweet.find({
+      body: regex
+    }).then((tweets) => {
       tweets.forEach((tweet, i) => {
         text += tweet.body + " "
+      })
+      searchText.push(text);
+      alchemyapi.sentiment("text", searchText, {}, function(response) {
+        console.log("Sentiment: " + response['docSentiment']['type']);
       });
-      searchText.text.push(text);
-      res.json(tweets);
-      // entities(searchText).then((data) =>{
-      //   console.log("Hitting the promise");
-      //   console.log(data);
-      //   res.json(tweets)
-      // })
+      res.json(tweets)
     })
-  }
-}
 
-function entities(req, res, output) {
-  alchemyapi.entities('text', searchText,{ 'sentiment':1 }, function(response) {
-    output['entities'] = { text:searchText, response:JSON.stringify(response,null,4), results:response['entities'] };
-    keywords(req, res, output);
-  });
+  }
 }
 
 
