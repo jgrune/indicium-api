@@ -6,11 +6,11 @@ var alchemy_language = watson.alchemy_language({
 });
 var TweetModel = require('../models/tweet')
 
-// ===== TWITTER API =======
+// ===== TWITTER API ./i=======
 var Twit = require('twit')
 
 //select number of tweets you want returned
-var numTweets = 100;
+var numTweets = 1;
 
 //twitter API keys
 var T = new Twit({
@@ -33,7 +33,7 @@ function getTweets(search) {
     }
     let tweets = rawData.data.statuses.map((tweetData) => {
       return (
-        new TweetModel(tweetData.text, tweetData.created_at, tweetData.user.screen_name, tweetData.retweet_count, tweetData.favorite_count)
+        new TweetModel(tweetData.text, tweetData.created_at, tweetData.user.screen_name, tweetData.retweet_count, tweetData.favorite_count, tweetData.user.profile_image_url_https)
       )
     })
 
