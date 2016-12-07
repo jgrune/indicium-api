@@ -33,7 +33,7 @@ function getTweets(search) {
     }
     let tweets = rawData.data.statuses.map((tweetData) => {
       return (
-        new TweetModel(tweetData.text, tweetData.created_at, tweetData.user.screen_name, tweetData.retweet_count, tweetData.favorite_count, tweetData.user.profile_image_url_https)
+        new TweetModel(tweetData.text, tweetData.created_at, tweetData.user.screen_name, tweetData.retweet_count, tweetData.favorite_count, tweetData.user.profile_image_url_https.slice(0, -11) + ".jpg")
       )
     })
 
