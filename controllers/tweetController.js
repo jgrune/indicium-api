@@ -10,7 +10,7 @@ var TweetModel = require('../models/tweet')
 var Twit = require('twit')
 
 //select number of tweets you want returned
-var numTweets = 3;
+var numTweets = 50;
 
 //twitter API keys
 var T = new Twit({
@@ -68,7 +68,7 @@ var tweetController = {
 //   WATSON API
 // ==============
     var parameters = {
-      extract: 'entities, concepts, doc-sentiment, doc-emotion, keywords',
+      extract: 'concepts, doc-emotion',
       text: searchText
     };
 

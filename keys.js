@@ -8,7 +8,10 @@ var keys =
    access_token_secret:  'fIwlID9zUVpjLIgSJGL91JyPPEET4oftigxAfHnZZp108'
 
  },
- watson:'90cdce4101b60788c761f5610151f6d7837c443b'
+ // Bradley's key
+ // watson:'90cdce4101b60788c761f5610151f6d7837c443b'
+ //  Jon's key
+ watson: '78e16f15c669ce81223bb1498a0cb588a41c2bd4'
 }
 
 
