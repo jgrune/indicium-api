@@ -19,9 +19,12 @@ app.use(parser.json({extended: true}));
 app.use(parser.urlencoded({extended:true}))
 
 //setting up port
-app.listen(4000), () => {
-  console.log("app listening on port 4000");
-}
+app.set("port", process.env.PORT || 4000);
+
+
+app.listen(app.get("port"), function(){
+  console.log("It's aliiive!");
+});
 
 //routes for express
 app.get("/api/tweets/:search", tweetController.show)
