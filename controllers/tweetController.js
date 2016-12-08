@@ -10,7 +10,7 @@ var TweetModel = require('../models/tweet')
 var Twit = require('twit')
 
 //select number of tweets you want returned
-var numTweets = 50;
+var numTweets = 100;
 
 //twitter API keys
 var T = new Twit({
