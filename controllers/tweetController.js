@@ -32,8 +32,9 @@ function getTweets(search) {
       watsonResponse: {}
     }
     let tweets = rawData.data.statuses.map((tweetData) => {
+
       return (
-        new TweetModel(tweetData.text, tweetData.created_at, tweetData.user.screen_name, tweetData.retweet_count, tweetData.favorite_count, tweetData.user.profile_image_url_https)
+        new TweetModel(tweetData.text, tweetData.created_at, tweetData.user.screen_name, tweetData.retweet_count, tweetData.favorite_count)
       )
     })
 
@@ -54,6 +55,7 @@ var tweetController = {
     getTweets(req.params.search).then((responseObject) => {
       responseObject.tweets.forEach((tweet, i) => {
         text += tweet.text + ". "
+        console.log(tweet.img_url)
       })
 
     // create single concatenated string of tweets to be consumed by watson API
