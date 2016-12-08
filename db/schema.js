@@ -13,15 +13,10 @@ db.once('open', function(){
 
 var Schema = mongoose.Schema
 
-var TweetSchema = new Schema({
-  body: String
-})
-
 var SearchSchema = new Schema({
   body: String
 })
 
-mongoose.model("Tweet", TweetSchema);
 mongoose.model("Search", SearchSchema)
 
 module.exports = mongoose;

@@ -46,11 +46,6 @@ function getTweets(search) {
 // ======= TWEET CONTROLLER ============
 
 var tweetController = {
-  index: (req,res) => {
-    Tweet.find({}).then((tweets) => {
-      res.json(tweets)
-    })
-  },
   show: (req,res) => {
 
     var searchText = [];

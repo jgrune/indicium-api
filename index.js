@@ -24,8 +24,6 @@ app.listen(4000), () => {
 }
 
 //routes for express
-app.get("/api/tweets", tweetController.index)
-
 app.get("/api/tweets/:search", tweetController.show)
 
 app.post("/api/searches", searchController.new);
