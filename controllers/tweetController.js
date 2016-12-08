@@ -55,7 +55,6 @@ var tweetController = {
     getTweets(req.params.search).then((responseObject) => {
       responseObject.tweets.forEach((tweet, i) => {
         text += tweet.text + ". "
-        console.log(tweet.img_url)
       })
 
     // create single concatenated string of tweets to be consumed by watson API
