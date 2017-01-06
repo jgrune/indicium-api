@@ -9,7 +9,7 @@ var keys =
 
  },
  // Rob's Key
-   watson: 'c6eb5c688679c61f0a2a06562145542ab6d89687'
+   watson: process.env.WATSONKEY
 }
 
 
